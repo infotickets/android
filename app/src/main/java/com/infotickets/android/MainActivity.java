@@ -39,6 +39,7 @@ public class MainActivity extends BaseAct {
             }
         });
 
+        Log.d("","");
     }
 
     public void setData(Servicio[] result){
