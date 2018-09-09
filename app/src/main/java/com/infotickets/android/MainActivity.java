@@ -1,9 +1,11 @@
 package com.infotickets.android;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.GridView;
 
 import com.pack.adapter.ServiceAdapter;
@@ -47,6 +49,14 @@ public class MainActivity extends BaseAct {
         GridView gridView = (GridView) findViewById(R.id.grid);
         ServiceAdapter adapter = new ServiceAdapter(this,result);
         gridView.setAdapter(adapter);
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent=new Intent(getApplicationContext(),SelectSuject.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
 

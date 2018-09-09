@@ -15,6 +15,7 @@ public class ServiceAdapter extends BaseAdapter {
 
     LayoutInflater inflater;
     Servicio[] result;
+    int[] colors={Color.RED,Color.BLUE, Color.YELLOW};
 
     public ServiceAdapter(Context context, Servicio[] result) {
         inflater= (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -38,11 +39,13 @@ public class ServiceAdapter extends BaseAdapter {
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
+        int color = i % colors.length;
         view = inflater.inflate(R.layout.list_item_service,null);
         TextView textView = (TextView)view.findViewById(R.id.textView_item_service_name);
         //TextView textView2 = (TextView)view.findViewById(R.id.textView_item_service_provider);
         textView.setText(result[i].getNb_servicio());
-        setBackgroundColor(i,textView);
+        textView.setBackgroundColor(colors[color]);
+        //setBackgroundColor(i,textView);
         //textView2.setText(result[i].getNb_empresa());
         return view;
     }
@@ -52,6 +55,9 @@ public class ServiceAdapter extends BaseAdapter {
 
         if (num%2==1){
             textView.setBackgroundColor(Color.BLUE);
+        }
+        if (num%2==2){
+            textView.setBackgroundColor(Color.YELLOW);
         }
     }
 

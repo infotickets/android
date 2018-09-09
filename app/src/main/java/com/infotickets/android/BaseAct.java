@@ -18,7 +18,8 @@ public class BaseAct  extends AppCompatActivity {
             dialogBuilder.setView(dialogView);
             progressDialog = dialogBuilder.create();
             progressDialog.setCancelable(false);
-           // progressDialog.getWindow().setBackgroundDrawableResource();
+            progressDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+            // progressDialog.getWindow().setBackgroundDrawableResource();
             //progressDialog.getWindow().setBackgroundDrawableResource();
         }
         if (show) {
