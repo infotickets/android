@@ -1,6 +1,7 @@
 package com.pack.adapter;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -41,7 +42,17 @@ public class ServiceAdapter extends BaseAdapter {
         TextView textView = (TextView)view.findViewById(R.id.textView_item_service_name);
         //TextView textView2 = (TextView)view.findViewById(R.id.textView_item_service_provider);
         textView.setText(result[i].getNb_servicio());
+        setBackgroundColor(i,textView);
         //textView2.setText(result[i].getNb_empresa());
         return view;
     }
+
+    private void setBackgroundColor(int num, TextView textView){
+        int color=0;
+
+        if (num%2==1){
+            textView.setBackgroundColor(Color.BLUE);
+        }
+    }
+
 }

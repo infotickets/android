@@ -1,9 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<GridView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:numColumns="2"
-    android:id="@+id/grid"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:background="@color/rosaInfoTickets"
     >
 
-</GridView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="20dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wellcome!!"
+            android:textSize="30dp"
+            android:layout_gravity="center"
+            android:textColor="@color/red"
+            android:textStyle="italic"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buy and Tap!"
+            android:textSize="15dp"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            />
+
+        <GridView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:numColumns="2"
+            android:id="@+id/grid"
+            android:layout_gravity="center"
+            android:verticalSpacing="2dp"
+            android:horizontalSpacing="2dp"
+
+        />
+    </LinearLayout>
+</LinearLayout>
+

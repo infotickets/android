@@ -1,23 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="200dp"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:background="@color/rosaInfoTickets"
     android:orientation="vertical"
-    tools:layout_margin="5sp">
-
-
+    >
     <TextView
         android:id="@+id/textView_item_service_name"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:width="180dp"
-        android:height="180dp"
-        android:background="@color/blue"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:background="@color/red"
         android:gravity="center"
         android:maxWidth="180dp"
-        android:text="@string/textviaaew" />
+        android:text="@string/textviaaew"
+        android:textColor="@color/white"/>
 
     <TextView
         android:id="@+id/textView_item_service_provider"
@@ -26,6 +24,6 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:text=""
-        android:visibility="visible" />
+        android:visibility="gone" />
 
 </LinearLayout>

@@ -3,4 +3,7 @@
     <string name="baseUrl">https://info-tickets.es/api-test/public/</string>
     <string name="textviaaew">TextViaaew</string>
     <string name="textviewMain">Remenber to activate the NFC option of your mobile device! Enjoy! :)</string>
+
+
+
 </resources>
