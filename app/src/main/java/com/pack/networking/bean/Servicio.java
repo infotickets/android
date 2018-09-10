@@ -4,6 +4,7 @@ public class Servicio {
 
     private String idservicio;
     private String nb_servicio;
+    private String nb_corto_servicio;
     private String ca_maxima;
     private String nb_archivo;
     private String nb_empresa;
@@ -19,6 +20,14 @@ public class Servicio {
 
     public String getNb_servicio() {
         return nb_servicio;
+    }
+
+    public String getNb_corto_servicio() {
+        return nb_corto_servicio;
+    }
+
+    public void setNb_corto_servicio(String nb_corto_servicio) {
+        this.nb_corto_servicio = nb_corto_servicio;
     }
 
     public void setNb_servicio(String nb_servicio) {
