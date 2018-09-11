@@ -4,20 +4,13 @@
             "outputFile": "/home/roger/workspace/infotickets/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
             "map": [
                 {
-                    "source": "/home/roger/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.1.0.aar/17503f7b2b1499f2ee9da5c6e9f205fb/res/values-land/values-land.xml",
+                    "source": "/home/roger/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/9c696d54117580d3c0a41e68794b35d9/res/values-land/values-land.xml",
                     "from": {
-                        "startLines": "4,7,10,13,16,17",
-                        "startColumns": "4,4,4,4,4,4",
-                        "startOffsets": "287,582,896,1199,1505,1576",
-                        "endColumns": "61,71,69,63,70,67",
-                        "endOffsets": "344,649,961,1258,1571,1639"
-                    },
-                    "to": {
-                        "startLines": "2,3,4,5,6,7",
-                        "startColumns": "4,4,4,4,4,4",
-                        "startOffsets": "55,117,189,259,323,394",
-                        "endColumns": "61,71,69,63,70,67",
-                        "endOffsets": "112,184,254,318,389,457"
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,125,189,260",
+                        "endColumns": "69,63,70,67",
+                        "endOffsets": "120,184,255,323"
                     }
                 }
             ]

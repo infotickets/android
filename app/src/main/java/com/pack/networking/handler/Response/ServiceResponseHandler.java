@@ -1,6 +1,6 @@
 package com.pack.networking.handler.Response;
 
-import com.infotickets.android.MainActivity;
+import es.infotickets.android.MainActivity;
 import com.google.gson.Gson;
 import com.pack.networking.bean.Servicio;
 

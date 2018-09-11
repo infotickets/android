@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.infotickets.android.R;
+import es.infotickets.android.R;
 import com.pack.networking.bean.Servicio;
 
 public class ServiceAdapter extends BaseAdapter {

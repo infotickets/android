@@ -20,7 +20,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 
-import com.infotickets.android.R;
+import es.infotickets.android.R;
 
 @TargetApi(Build.VERSION_CODES.GINGERBREAD_MR1)
 @SuppressLint("NewApi")

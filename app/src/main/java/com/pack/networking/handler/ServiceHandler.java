@@ -2,7 +2,7 @@ package com.pack.networking.handler;
 
 import android.content.Context;
 
-import com.infotickets.android.R;
+import es.infotickets.android.R;
 import com.pack.networking.RetroBase;
 import com.pack.networking.interfaz.Interfaz;
 
