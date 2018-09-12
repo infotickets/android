@@ -43,7 +43,7 @@ public class ServiceAdapter extends BaseAdapter {
         view = inflater.inflate(R.layout.list_item_service,null);
         TextView textView = (TextView)view.findViewById(R.id.textView_item_service_name);
         //TextView textView2 = (TextView)view.findViewById(R.id.textView_item_service_provider);
-        textView.setText(result[i].getNb_corto_servicio());
+        textView.setText(result[i].getNbCortoServicio());
         textView.setBackgroundColor(colors[color]);
 
         //setBackgroundColor(i,textView);

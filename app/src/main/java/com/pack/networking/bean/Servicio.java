@@ -2,68 +2,67 @@ package com.pack.networking.bean;
 
 public class Servicio {
 
-    private String idservicio;
-    private String nb_servicio;
-    private String nb_corto_servicio;
-    private String ca_maxima;
-    private String nb_archivo;
-    private String nb_empresa;
-    private String nb_categoria;
+    private String idServicio;
+    private String nbServicio;
+    private String nbCortoServicio;
+    private String caMaxima;
+    private String nbArchivo;
+    private String nbEmpresa;
+    private String nbCategoria;
 
-    public String getIdservicio() {
-        return idservicio;
+    public String getIdServicio() {
+        return idServicio;
     }
 
-    public void setIdservicio(String idservicio) {
-        this.idservicio = idservicio;
+    public void setIdServicio(String idServicio) {
+        this.idServicio = idServicio;
     }
 
-    public String getNb_servicio() {
-        return nb_servicio;
+    public String getNbServicio() {
+        return nbServicio;
     }
 
-    public String getNb_corto_servicio() {
-        return nb_corto_servicio;
+    public void setNbServicio(String nbServicio) {
+        this.nbServicio = nbServicio;
     }
 
-    public void setNb_corto_servicio(String nb_corto_servicio) {
-        this.nb_corto_servicio = nb_corto_servicio;
+    public String getNbCortoServicio() {
+        return nbCortoServicio;
     }
 
-    public void setNb_servicio(String nb_servicio) {
-        this.nb_servicio = nb_servicio;
+    public void setNbCortoServicio(String nbCortoServicio) {
+        this.nbCortoServicio = nbCortoServicio;
     }
 
-    public String getCa_maxima() {
-        return ca_maxima;
+    public String getCaMaxima() {
+        return caMaxima;
     }
 
-    public void setCa_maxima(String ca_maxima) {
-        this.ca_maxima = ca_maxima;
+    public void setCaMaxima(String caMaxima) {
+        this.caMaxima = caMaxima;
     }
 
-    public String getNb_archivo() {
-        return nb_archivo;
+    public String getNbArchivo() {
+        return nbArchivo;
     }
 
-    public void setNb_archivo(String nb_archivo) {
-        this.nb_archivo = nb_archivo;
+    public void setNbArchivo(String nbArchivo) {
+        this.nbArchivo = nbArchivo;
     }
 
-    public String getNb_empresa() {
-        return nb_empresa;
+    public String getNbEmpresa() {
+        return nbEmpresa;
     }
 
-    public void setNb_empresa(String nb_empresa) {
-        this.nb_empresa = nb_empresa;
+    public void setNbEmpresa(String nbEmpresa) {
+        this.nbEmpresa = nbEmpresa;
     }
 
-    public String getNb_categoria() {
-        return nb_categoria;
+    public String getNbCategoria() {
+        return nbCategoria;
     }
 
-    public void setNb_categoria(String nb_categoria) {
-        this.nb_categoria = nb_categoria;
+    public void setNbCategoria(String nbCategoria) {
+        this.nbCategoria = nbCategoria;
     }
-
-    }
+}
