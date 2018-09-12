@@ -9,6 +9,9 @@ public class Servicio {
     private String nbArchivo;
     private String nbEmpresa;
     private String nbCategoria;
+    private Integer caDias;
+
+    private String[] dias;
 
     public String getIdServicio() {
         return idServicio;
@@ -64,5 +67,21 @@ public class Servicio {
 
     public void setNbCategoria(String nbCategoria) {
         this.nbCategoria = nbCategoria;
+    }
+
+    public Integer getCaDias() {
+        return caDias;
+    }
+
+    public void setCaDias(Integer caDias) {
+        this.caDias = caDias;
+    }
+
+    public String[] getDias() {
+        return dias;
+    }
+
+    public void setDias(String[] dias) {
+        this.dias = dias;
     }
 }

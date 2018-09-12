@@ -1,5 +1,6 @@
 package com.pack.networking.handler.Response;
 
+import es.infotickets.android.Data;
 import es.infotickets.android.MainActivity;
 import com.google.gson.Gson;
 import com.pack.networking.bean.Servicio;
@@ -11,7 +12,7 @@ public class ServiceResponseHandler {
 
     public void procesServices(Response<String> response, MainActivity activity){
         String body = response.body().toString();
-        Servicio[] result =  gson.fromJson(body,Servicio[].class);
-        activity.setData(result);
+        Data.setServicio( gson.fromJson(body,Servicio[].class));
+        activity.setData(Data.getServicio());
     }
 }
