@@ -2,6 +2,7 @@ package es.infotickets.android;
 
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -20,8 +21,6 @@ import es.infotickets.android.databinding.ActivityWellcomeBinding;
 public class WellcomeAct extends BaseAct {
     private static final int RC_SIGN_IN =1 ;
     ActivityWellcomeBinding binding;
-    GoogleSignInClient mGoogleSignInClient;
-    private final String tokenId="181202721244-0padp95lskurt8sfcl4i1e0ne3do5162.apps.googleusercontent.com";
 
 
     @Override
@@ -31,21 +30,10 @@ public class WellcomeAct extends BaseAct {
         binding = DataBindingUtil.setContentView(this,R.layout.activity_wellcome);
         binding.signInButtonFacebook.setOnClickListener(listener);
         binding.signInButtonFacebook.setOnClickListener(listener);
-
-
-        // Configure sign-in to request the user's ID, email address, and basic
-// profile. ID and basic profile are included in DEFAULT_SIGN_IN.
-        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestEmail()
-               // .requestIdToken(tokenId)
-                .build();
-
-        // Build a GoogleSignInClient with the options specified by gso.
-         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
-
-
         binding.signInButtonGoogle.setOnClickListener(listener);
     }
+
+
 
 
     View.OnClickListener listener = new View.OnClickListener() {
@@ -90,6 +78,7 @@ public class WellcomeAct extends BaseAct {
 
             Intent intent = new Intent(getApplicationContext(),MainActivity.class);
             startActivity(intent);
+            finishAffinity();
 
 
         } catch (ApiException e) {

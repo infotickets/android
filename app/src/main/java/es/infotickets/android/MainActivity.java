@@ -2,7 +2,9 @@ package es.infotickets.android;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
@@ -23,6 +25,12 @@ public class MainActivity extends BaseAct {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Toolbar toolbar=findViewById(R.id.my_toolbar);
+        toolbar.setTitle("");
+        setSupportActionBar(toolbar);
+
+
+
         showDialog(true);
         ServiceHandler serviceHandler = new ServiceHandler(this);
         serviceHandler.getService(new Callback<String>() {
@@ -42,6 +50,22 @@ public class MainActivity extends BaseAct {
         });
 
         Log.d("","");
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        //return super.onCreateOptionsMenu(menu);
+        getMenuInflater().inflate(R.menu.action_bar,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onMenuOpened(int featureId, Menu menu) {
+        //return super.onMenuOpened(featureId, menu);
+        Intent intent = new Intent(getApplicationContext(),OptionAct.class);
+        startActivity(intent);
+        closeOptionsMenu();
+        return true;
     }
 
     public void setData(Servicio[] result){

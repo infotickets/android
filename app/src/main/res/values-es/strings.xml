@@ -4,6 +4,9 @@
     <string name="textviaaew">TextViaaew</string>
     <string name="textviewMain">Remenber to activate the NFC option of your mobile device! Enjoy! :)</string>
 
+    <string name="title_activity_splash">Splash</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 
 
 </resources>
