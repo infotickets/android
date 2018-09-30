@@ -52,19 +52,15 @@ public class MainActivity extends BaseAct {
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Data.setIndexActual(i);
+              /*  Data.setIndexActual(i);
                 if(Data.getServicioActual().getCaDias()>1){
                     Intent intent=new Intent(getApplicationContext(),SelectSuject.class);
                     startActivity(intent);
                 }esle{
                     Intent intent=new Intent(getApplicationContext(),SelectSuject.class);
                     startActivity(intent);
-                }
+                }*/
             }
         });
-
     }
-
-
-
 }
