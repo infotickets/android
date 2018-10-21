@@ -28,8 +28,6 @@ public class WellcomeAct extends BaseAct {
         super.onCreate(savedInstanceState);
     //    FacebookSdk.sdkInitialize(getApplicationContext());
         binding = DataBindingUtil.setContentView(this,R.layout.activity_wellcome);
-        binding.signInButtonFacebook.setOnClickListener(listener);
-        binding.signInButtonFacebook.setOnClickListener(listener);
         binding.signInButtonGoogle.setOnClickListener(listener);
     }
 
