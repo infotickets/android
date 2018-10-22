@@ -13,7 +13,7 @@ android {
     buildToolsVersion "27.0.3"
     defaultConfig {
         applicationId "es.infotickets.android"
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 27
         multiDexEnabled true
     }

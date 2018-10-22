@@ -122,7 +122,7 @@ public class Splash extends BaseAct {
         showDialog(true);
         GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(this);
         if (acct != null) {
-            intent = new Intent(getApplicationContext(),MainActivity.class);
+            intent = new Intent(getApplicationContext(),BeforeMainActivity.class);
             //startActivity(intent);
             //finishAffinity();
 /*

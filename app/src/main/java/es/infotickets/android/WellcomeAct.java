@@ -74,7 +74,7 @@ public class WellcomeAct extends BaseAct {
 
             Toast.makeText(getApplicationContext(),"LOgged!",Toast.LENGTH_LONG).show();
 
-            Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+            Intent intent = new Intent(getApplicationContext(),BeforeMainActivity.class);
             startActivity(intent);
             finishAffinity();
 
