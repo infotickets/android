@@ -19,4 +19,15 @@ public class ServiceHandler {
         Interfaz service  = retro.obj.create(Interfaz.class);
         service.getServicios().enqueue(call);
     }
+
+    public void signIn(String email, String token,Callback<String> call){
+        Interfaz service  = retro.obj.create(Interfaz.class);
+        service.SignIn(email,token).enqueue(call);
+    }
+    public void buy(String token, String qrContent,Callback<String> call){
+        Interfaz service  = retro.obj.create(Interfaz.class);
+        service.buy(token,qrContent).enqueue(call);
+    }
+
+
 }

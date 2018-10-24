@@ -14,9 +14,13 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.Task;
+import com.pack.networking.handler.ServiceHandler;
 
 import es.infotickets.android.R;
 import es.infotickets.android.databinding.ActivityWellcomeBinding;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class WellcomeAct extends BaseAct {
     private static final int RC_SIGN_IN =1 ;
@@ -74,11 +78,21 @@ public class WellcomeAct extends BaseAct {
 
             Toast.makeText(getApplicationContext(),"LOgged!",Toast.LENGTH_LONG).show();
 
-            Intent intent = new Intent(getApplicationContext(),BeforeMainActivity.class);
-            startActivity(intent);
-            finishAffinity();
 
-
+            ServiceHandler serviceHandler = new ServiceHandler(getApplicationContext());
+            serviceHandler.signIn(account.getEmail(), account.getId(), new Callback<String>() {
+                @Override
+                public void onResponse(Call<String> call, Response<String> response) {
+                    if (response.code()==200)
+                        continueee();
+                    else
+                        Toast.makeText(getApplicationContext(),"Failed with server!",Toast.LENGTH_LONG).show();
+                }
+                @Override
+                public void onFailure(Call<String> call, Throwable t) {
+                    Toast.makeText(getApplicationContext(),"Failed with server!",Toast.LENGTH_LONG).show();
+                }
+            });
         } catch (ApiException e) {
             // The ApiException status code indicates the detailed failure reason.
             // Please refer to the GoogleSignInStatusCodes class reference for more information.
@@ -87,5 +101,10 @@ public class WellcomeAct extends BaseAct {
         }
     }
 
+    private void continueee(){
+        Intent intent = new Intent(getApplicationContext(),BeforeMainActivity.class);
+        startActivity(intent);
+        finishAffinity();
+    }
 
 }

@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     tools:context=".ScannResultAct"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    >
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/content"/>
-
-
-
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -26,11 +28,40 @@
             android:text="Compra Ok"
             android:gravity="center_horizontal"
             android:id="@+id/textview_title"/>
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/listview"
+            android:visibility="visible"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="right">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total"
+                android:gravity="right"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="right" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/total_label"
+                android:text="60 $"
+                android:gravity="right"
+                android:layout_marginRight="10dp"
+                android:background="@color/blue_color"
+                android:layout_gravity="right" />
+        </LinearLayout>
+
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:weightSum="2"
-            android:id="@+id/table_result">
+            android:id="@+id/table_result"
+            android:visibility="gone">
             <TableRow>
                 <TextView
                     android:layout_width="0dp"
@@ -113,3 +144,4 @@
 
     </LinearLayout>
 </LinearLayout>
+</ScrollView>

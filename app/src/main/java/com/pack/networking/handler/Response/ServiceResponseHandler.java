@@ -2,6 +2,7 @@ package com.pack.networking.handler.Response;
 
 import es.infotickets.android.MainActivity;
 import com.google.gson.Gson;
+import com.pack.networking.bean.Compra;
 import com.pack.networking.bean.Servicio;
 
 import retrofit2.Response;
@@ -15,4 +16,13 @@ public class ServiceResponseHandler {
       //  Data.setServicio( gson.fromJson(body,Servicio[].class));
        // activity.setData(Data.getServicio());
     }
+
+
+    public Compra processBuy(Response<String> response){
+        String body = response.body().toString();
+        return gson.fromJson(body,Compra.class);
+    }
+
+
+
 }
